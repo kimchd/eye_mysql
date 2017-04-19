@@ -64,12 +64,11 @@ public class BoardDAOTest {
 
 	@Test
 	public void paging() {
-		int page = 3;
+		int page = 2;
 
 		page = (page - 1) * 10;
 
 		List<BoardVO> list = dao.paging(page);
-		logger.info(page / 10 + "페이지");
 		for (BoardVO boardVO : list) {
 			logger.info(boardVO.getBno() + ":" + boardVO.getTitle() + ":" + boardVO.getContent() + ":"
 					+ boardVO.getWriter() + ":" + boardVO.getRegdate() + ":" + boardVO.getUpdatedate());
